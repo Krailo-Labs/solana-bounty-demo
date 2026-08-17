@@ -14,10 +14,10 @@ export default function App() {
   }, []);
 
   return (
-    <div className="w-full h-[100dvh] flex items-center justify-center bg-[#050505] overflow-hidden p-0 sm:p-2 md:p-3 lg:p-4 select-none">
+    <div className="w-full h-[100dvh] bg-[#0A0A0B] overflow-hidden select-none flex flex-col">
       <div 
         id="app-container"
-        className="relative w-full h-full max-w-7xl max-h-[100dvh] sm:max-h-[96dvh] bg-[#0A0A0B] shadow-2xl overflow-hidden sm:border sm:border-white/10 sm:rounded-2xl flex flex-col"
+        className="relative w-full h-full bg-[#0A0A0B] overflow-hidden flex flex-col"
       >
         <MainStage isMobile={isMobile} />
       </div>

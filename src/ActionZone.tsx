@@ -74,23 +74,23 @@ export function ActionZone({
 
       {/* Final Slide Controls: Replay and Enter Q&A & AI Hub */}
       {isEnd ? (
-        <div className="flex items-center gap-2.5 sm:gap-4 w-full max-w-lg justify-center">
+        <div className="flex items-center gap-2 sm:gap-4 w-full max-w-lg justify-center max-sm:px-1">
           <button
             id="action-replay-btn"
             onClick={onReplay}
-            className="flex-1 max-w-[170px] sm:max-w-[200px] h-12 sm:h-14 flex items-center justify-center gap-2 rounded-2xl bg-white/15 hover:bg-white/25 border-2 border-white/25 text-white font-extrabold text-xs sm:text-sm md:text-base tracking-wide transition-all active:scale-95 shadow-lg"
+            className="flex-[0.8] sm:flex-1 h-12 sm:h-14 flex items-center justify-center gap-1.5 sm:gap-2 rounded-2xl bg-white/15 hover:bg-white/25 border-2 border-white/25 text-white font-extrabold text-[10px] sm:text-sm md:text-base tracking-wide transition-all active:scale-95 shadow-lg max-sm:px-1"
           >
-            <RotateCcw className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-300" />
-            <span>{lang === 'ua' ? 'Спочатку' : 'Replay'}</span>
+            <RotateCcw className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-cyan-300 flex-shrink-0" />
+            <span className="whitespace-nowrap">{lang === 'ua' ? 'Спочатку' : 'Replay'}</span>
           </button>
 
           <button
             id="action-qa-btn"
             onClick={onOpenQA}
-            className="flex-1.3 max-w-[240px] sm:max-w-[280px] h-12 sm:h-14 flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[#14F195] via-cyan-400 to-blue-500 text-slate-950 font-black text-xs sm:text-sm md:text-base tracking-wide transition-all active:scale-95 shadow-[0_0_30px_rgba(20,241,149,0.6)]"
+            className="flex-[1.2] sm:flex-[1.3] h-12 sm:h-14 flex items-center justify-center gap-1.5 sm:gap-2 rounded-2xl bg-gradient-to-r from-[#14F195] via-cyan-400 to-blue-500 text-slate-950 font-black text-[11px] sm:text-sm md:text-base tracking-wide transition-all active:scale-95 shadow-[0_0_30px_rgba(20,241,149,0.6)] max-sm:px-1"
           >
-            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-slate-950 animate-pulse" />
-            <span>{lang === 'ua' ? 'Питання & AI Чат →' : 'Q&A & AI Chat →'}</span>
+            <Sparkles className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-slate-950 animate-pulse flex-shrink-0" />
+            <span className="whitespace-nowrap text-center leading-tight">{lang === 'ua' ? 'Питання & AI Чат →' : 'Q&A & AI Chat →'}</span>
           </button>
         </div>
       ) : (

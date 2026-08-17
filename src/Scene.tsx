@@ -50,7 +50,7 @@ const IntroVsPreview = ({ lang }: { lang: string }) => {
              <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-2xl bg-cyan-900/50 border-2 border-cyan-400/60 flex items-center justify-center mb-2.5 sm:mb-4 shadow-[0_0_25px_rgba(6,182,212,0.4)]">
                <Building className="w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 text-cyan-300" />
              </div>
-             <div className="text-cyan-300 text-xs sm:text-sm md:text-base tracking-wider font-black uppercase text-center leading-tight">
+             <div className="text-cyan-300 text-xs sm:text-sm md:text-base max-sm:tracking-normal tracking-wider font-black uppercase text-center leading-tight">
                {lang === 'ua' ? 'Традиційні банки' : 'Traditional Bank'}
              </div>
              <div className="mt-2.5 text-[10px] sm:text-xs md:text-sm text-cyan-100 font-bold font-mono text-center bg-cyan-950/80 px-2.5 py-1 rounded-full border border-cyan-500/30">
@@ -79,7 +79,7 @@ const IntroVsPreview = ({ lang }: { lang: string }) => {
              <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-2xl bg-[#14F195]/20 border-2 border-[#14F195]/70 flex items-center justify-center mb-2.5 sm:mb-4 shadow-[0_0_30px_rgba(20,241,149,0.5)]">
                <Zap className="w-7 h-7 sm:w-9 sm:h-9 md:w-11 md:h-11 text-[#14F195]" />
              </div>
-             <div className="text-[#14F195] text-xs sm:text-sm md:text-base tracking-wider font-black uppercase text-center leading-tight">
+             <div className="text-[#14F195] text-xs sm:text-sm md:text-base max-sm:tracking-normal tracking-wider font-black uppercase text-center leading-tight">
                {lang === 'ua' ? 'Мережа Solana' : 'Solana Network'}
              </div>
              <div className="mt-2.5 text-[10px] sm:text-xs md:text-sm text-[#14F195] font-bold font-mono text-center bg-black/90 px-2.5 py-1 rounded-full border border-[#14F195]/50 shadow-[0_0_15px_rgba(20,241,149,0.2)]">
@@ -144,7 +144,7 @@ const PersonNode = ({ label, x, y, cWidth, cHeight, active, isSolana, labelPos =
       animate={{ opacity: active ? 1 : 0.4 }}
     >
       {labelPos === 'top' && (
-        <div className={`mb-2 text-xs sm:text-sm md:text-base font-black tracking-wider uppercase px-3 py-1 rounded-xl border shadow-xl ${labelBg} ${labelBorder} ${labelText} whitespace-nowrap`}>
+        <div className={`mb-2 text-xs sm:text-sm md:text-base font-black max-sm:tracking-normal tracking-wider uppercase px-3 py-1 rounded-xl border shadow-xl ${labelBg} ${labelBorder} ${labelText} max-sm:whitespace-normal max-sm:break-words text-center leading-tight`}>
           {label}
         </div>
       )}
@@ -152,7 +152,7 @@ const PersonNode = ({ label, x, y, cWidth, cHeight, active, isSolana, labelPos =
         <User className={`w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 ${iconCol}`} />
       </div>
       {labelPos === 'bottom' && (
-        <div className={`mt-2 text-xs sm:text-sm md:text-base font-black tracking-wider uppercase px-3 py-1 rounded-xl border shadow-xl ${labelBg} ${labelBorder} ${labelText} whitespace-nowrap`}>
+        <div className={`mt-2 text-xs sm:text-sm md:text-base font-black max-sm:tracking-normal tracking-wider uppercase px-3 py-1 rounded-xl border shadow-xl ${labelBg} ${labelBorder} ${labelText} max-sm:whitespace-normal max-sm:break-words text-center leading-tight`}>
           {label}
         </div>
       )}
@@ -195,7 +195,7 @@ const BankCard = ({ label, icon: Icon, x, y, cWidth, cHeight, active, highlight,
       animate={{ opacity: active ? 1 : 0.4, scale: highlight ? 1.08 : 1 }}
     >
       {labelPos === 'top' && (
-        <div className={`mb-2 text-xs sm:text-sm md:text-base font-black tracking-wider uppercase px-3 py-1 rounded-xl border shadow-xl ${theme.labelBg} ${theme.labelBorder} ${theme.labelText} whitespace-nowrap`}>
+        <div className={`mb-2 text-xs sm:text-sm md:text-base font-black max-sm:tracking-normal tracking-wider uppercase px-3 py-1 rounded-xl border shadow-xl ${theme.labelBg} ${theme.labelBorder} ${theme.labelText} max-sm:whitespace-normal max-sm:break-words text-center leading-tight`}>
           {label}
         </div>
       )}
@@ -203,7 +203,7 @@ const BankCard = ({ label, icon: Icon, x, y, cWidth, cHeight, active, highlight,
         <Icon className={`w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 ${theme.icon}`} />
       </div>
       {labelPos === 'bottom' && (
-        <div className={`mt-2 text-xs sm:text-sm md:text-base font-black tracking-wider uppercase px-3 py-1 rounded-xl border shadow-xl ${theme.labelBg} ${theme.labelBorder} ${theme.labelText} whitespace-nowrap`}>
+        <div className={`mt-2 text-xs sm:text-sm md:text-base font-black max-sm:tracking-normal tracking-wider uppercase px-3 py-1 rounded-xl border shadow-xl ${theme.labelBg} ${theme.labelBorder} ${theme.labelText} max-sm:whitespace-normal max-sm:break-words text-center leading-tight`}>
           {label}
         </div>
       )}
@@ -309,11 +309,11 @@ const BlockchainLedgerSlide = ({ isMobile, lang }: { isMobile: boolean, lang: st
         <div className="relative flex flex-col items-center justify-center z-30 pointer-events-none">
           <div className="w-18 h-18 sm:w-22 sm:h-22 md:w-26 md:h-26 rounded-2xl bg-cyan-950/95 border-2 border-cyan-400 flex flex-col items-center justify-center shadow-[0_0_40px_rgba(6,182,212,0.5)] backdrop-blur-xl p-1.5">
              <Database className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-cyan-300 mb-0.5 drop-shadow-[0_0_10px_rgba(6,182,212,0.9)]" />
-             <div className="text-[8px] sm:text-[10px] md:text-xs font-black text-cyan-100 uppercase tracking-wider bg-cyan-900/90 px-1.5 py-0.5 rounded whitespace-nowrap">
+             <div className="text-[8px] sm:text-[10px] md:text-xs font-black text-cyan-100 uppercase max-sm:tracking-normal tracking-wider bg-cyan-900/90 px-1.5 py-0.5 rounded max-sm:whitespace-normal max-sm:break-words text-center leading-tight">
                {lang === 'ua' ? 'СПІЛЬНА КНИГА' : 'SHARED BOOK'}
              </div>
           </div>
-          <div className="mt-1 text-cyan-200 text-[8px] sm:text-[9px] md:text-[11px] font-bold uppercase tracking-wider bg-black/90 px-2 sm:px-2.5 py-0.5 rounded-full border border-cyan-400/50 shadow-md whitespace-nowrap">
+          <div className="mt-1 text-cyan-200 text-[8px] sm:text-[9px] md:text-[11px] font-bold uppercase max-sm:tracking-normal tracking-wider bg-black/90 px-2 sm:px-2.5 py-0.5 rounded-full border border-cyan-400/50 shadow-md max-sm:whitespace-normal max-sm:break-words text-center leading-tight">
             {lang === 'ua' ? 'Один запис для всіх' : 'Same record for all'}
           </div>
         </div>
@@ -332,7 +332,7 @@ const BlockchainLedgerSlide = ({ isMobile, lang }: { isMobile: boolean, lang: st
                 <Monitor className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-cyan-300" />
                 <div className="text-[7px] sm:text-[8px] font-mono font-bold text-cyan-300 leading-none mt-0.5">{item.city}</div>
               </div>
-              <div className="mt-0.5 text-[7px] sm:text-[8px] md:text-[9px] font-black text-cyan-100 uppercase tracking-wider bg-black/90 px-1.5 py-0.5 rounded border border-cyan-500/40 whitespace-nowrap shadow-sm">
+              <div className="mt-0.5 text-[7px] sm:text-[8px] md:text-[9px] font-black text-cyan-100 uppercase max-sm:tracking-normal tracking-wider bg-black/90 px-1.5 py-0.5 rounded border border-cyan-500/40 max-sm:whitespace-normal max-sm:break-words text-center leading-tight shadow-sm">
                 {item.label}
               </div>
             </div>
@@ -407,16 +407,16 @@ const SolanaNetworkSlide = ({ isMobile, lang }: { isMobile: boolean, lang: strin
               className="absolute flex flex-col items-center justify-center -translate-x-1/2 -translate-y-1/2"
               style={{ left: node.x, top: node.y, zIndex: isCenter ? 30 : 20 }}
             >
-              <div className={`relative ${isCenter ? 'w-[120px] sm:w-[150px] md:w-[180px] h-[75px] sm:h-[88px] md:h-[100px] border-3 border-[#14F195] bg-[#14F195]/20' : 'w-[105px] sm:w-[135px] md:w-[165px] h-[66px] sm:h-[80px] md:h-[92px] border-2 sm:border-3 border-[#14F195]/70 bg-black/90'} rounded-2xl flex flex-col items-center justify-center p-2 shadow-[0_0_30px_rgba(20,241,149,0.4)] backdrop-blur-xl`}>
+              <div className={`relative ${isCenter ? 'w-[130px] sm:w-[150px] md:w-[180px] h-[100px] sm:h-[88px] md:h-[100px] border-3 border-[#14F195] bg-[#14F195]/20' : 'w-[120px] sm:w-[135px] md:w-[165px] h-[90px] sm:h-[80px] md:h-[92px] border-2 sm:border-3 border-[#14F195]/70 bg-black/90'} rounded-2xl flex flex-col items-center justify-center p-2 shadow-[0_0_30px_rgba(20,241,149,0.4)] backdrop-blur-xl`}>
                 <div className="absolute top-2 right-2 flex items-center gap-1">
                   <span className="w-2 h-2 rounded-full bg-[#14F195] animate-ping" />
                   <span className="w-2 h-2 rounded-full bg-[#14F195]" />
                 </div>
                 <Cpu className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#14F195] mb-0.5 drop-shadow-[0_0_10px_rgba(20,241,149,0.9)]" />
-                <div className="text-[9px] sm:text-xs md:text-sm font-black text-white tracking-wider uppercase font-mono text-center">
+                <div className="text-[9px] sm:text-xs md:text-sm font-black text-white max-sm:tracking-normal tracking-wider uppercase font-mono text-center">
                   {isCenter ? centerTitle : node.name}
                 </div>
-                <div className="text-[8px] sm:text-[10px] md:text-xs text-[#14F195] font-mono font-bold mt-0.5 text-center line-clamp-1">
+                <div className="text-[8px] sm:text-[10px] md:text-xs text-[#14F195] font-mono font-bold mt-0.5 text-center ">
                   {isCenter ? centerSub : node.role}
                 </div>
               </div>
@@ -454,14 +454,14 @@ const SolanaSpeedVisual = ({ isMobile, lang }: { isMobile: boolean, lang: string
         <div className="w-full flex items-center justify-between gap-1 sm:gap-2.5 md:gap-4 max-w-4xl mb-2 sm:mb-3 md:mb-4 px-1 z-30">
           
           {/* Step 1: Sender Intent */}
-          <div className="flex-1 min-w-0 flex flex-col items-center justify-center bg-black/90 border-2 border-cyan-400 rounded-2xl p-1.5 sm:p-2.5 md:p-3 shadow-[0_0_20px_rgba(6,182,212,0.3)] backdrop-blur-xl">
+          <div className="flex-1 min-w-0 flex flex-col items-center justify-center bg-black/90 border-2 border-cyan-400 rounded-2xl p-1 max-sm:px-0.5 sm:p-2.5 md:p-3 shadow-[0_0_20px_rgba(6,182,212,0.3)] backdrop-blur-xl">
             <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-xl bg-cyan-950/90 border border-cyan-400 flex items-center justify-center mb-1">
               <User className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-cyan-300" />
             </div>
-            <div className="text-cyan-200 text-[8px] sm:text-xs md:text-sm font-black uppercase tracking-wider text-center truncate w-full">
+            <div className="text-cyan-200 text-[7px] sm:text-xs md:text-sm font-black uppercase max-sm:tracking-normal tracking-wider text-center w-full">
               {lang === 'ua' ? '1. Ти надсилаєш' : '1. You Send'}
             </div>
-            <div className="text-cyan-400 text-[7px] sm:text-[9px] md:text-[10px] font-mono font-bold mt-0.5 whitespace-nowrap">
+            <div className="text-cyan-400 text-[7px] sm:text-[9px] md:text-[10px] font-mono font-bold mt-0.5 max-sm:whitespace-normal max-sm:break-words text-center leading-tight">
               $1,000
             </div>
           </div>
@@ -472,7 +472,7 @@ const SolanaSpeedVisual = ({ isMobile, lang }: { isMobile: boolean, lang: string
           </div>
 
           {/* Step 2: Instant Direct Transmission */}
-          <div className="flex-1 min-w-0 flex flex-col items-center justify-center bg-gradient-to-b from-[#14F195]/20 to-black/95 border-2 border-[#14F195] rounded-2xl p-1.5 sm:p-2.5 md:p-3 shadow-[0_0_35px_rgba(20,241,149,0.4)] backdrop-blur-xl relative overflow-hidden">
+          <div className="flex-1 min-w-0 flex flex-col items-center justify-center bg-gradient-to-b from-[#14F195]/20 to-black/95 border-2 border-[#14F195] rounded-2xl p-1 max-sm:px-0.5 sm:p-2.5 md:p-3 shadow-[0_0_35px_rgba(20,241,149,0.4)] backdrop-blur-xl relative overflow-hidden">
             <motion.div 
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 6, ease: "linear" }}
@@ -480,10 +480,10 @@ const SolanaSpeedVisual = ({ isMobile, lang }: { isMobile: boolean, lang: string
             >
               <Cpu className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#14F195]" />
             </motion.div>
-            <div className="text-[#14F195] text-[8px] sm:text-xs md:text-sm font-black uppercase tracking-wider text-center truncate w-full">
+            <div className="text-[#14F195] text-[7px] sm:text-xs md:text-sm font-black uppercase max-sm:tracking-normal tracking-wider text-center w-full">
               {lang === 'ua' ? '2. Без черги' : '2. Direct Pickup'}
             </div>
-            <div className="text-emerald-300 text-[7px] sm:text-[8px] md:text-[10px] font-mono font-bold mt-0.5 bg-[#14F195]/20 px-1 py-0.5 rounded text-center whitespace-nowrap">
+            <div className="text-emerald-300 text-[7px] sm:text-[8px] md:text-[10px] font-mono font-bold mt-0.5 bg-[#14F195]/20 px-1 py-0.5 rounded text-center max-sm:whitespace-normal max-sm:break-words text-center leading-tight">
               {lang === 'ua' ? 'Пряма передача' : 'No Waiting'}
             </div>
           </div>
@@ -494,14 +494,14 @@ const SolanaSpeedVisual = ({ isMobile, lang }: { isMobile: boolean, lang: string
           </div>
 
           {/* Step 3: Collective Confirmation */}
-          <div className="flex-1 min-w-0 flex flex-col items-center justify-center bg-black/90 border-2 border-purple-400 rounded-2xl p-1.5 sm:p-2.5 md:p-3 shadow-[0_0_20px_rgba(168,85,247,0.3)] backdrop-blur-xl">
+          <div className="flex-1 min-w-0 flex flex-col items-center justify-center bg-black/90 border-2 border-purple-400 rounded-2xl p-1 max-sm:px-0.5 sm:p-2.5 md:p-3 shadow-[0_0_20px_rgba(168,85,247,0.3)] backdrop-blur-xl">
             <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-xl bg-purple-950/90 border border-purple-400 flex items-center justify-center mb-1">
               <Network className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-purple-300" />
             </div>
-            <div className="text-purple-200 text-[8px] sm:text-xs md:text-sm font-black uppercase tracking-wider text-center truncate w-full">
+            <div className="text-purple-200 text-[7px] sm:text-xs md:text-sm font-black uppercase max-sm:tracking-normal tracking-wider text-center w-full">
               {lang === 'ua' ? '3. Комп\'ютери' : '3. Computers'}
             </div>
-            <div className="text-purple-300 text-[7px] sm:text-[9px] md:text-[10px] font-mono font-bold mt-0.5 text-center whitespace-nowrap">
+            <div className="text-purple-300 text-[7px] sm:text-[9px] md:text-[10px] font-mono font-bold mt-0.5 text-center max-sm:whitespace-normal max-sm:break-words text-center leading-tight">
               {lang === 'ua' ? '0.4с згода' : '0.4s verify'}
             </div>
           </div>
@@ -512,14 +512,14 @@ const SolanaSpeedVisual = ({ isMobile, lang }: { isMobile: boolean, lang: string
           </div>
 
           {/* Step 4: Instant Arrival */}
-          <div className="flex-1 min-w-0 flex flex-col items-center justify-center bg-black/90 border-2 border-[#14F195] rounded-2xl p-1.5 sm:p-2.5 md:p-3 shadow-[0_0_25px_rgba(20,241,149,0.35)] backdrop-blur-xl">
+          <div className="flex-1 min-w-0 flex flex-col items-center justify-center bg-black/90 border-2 border-[#14F195] rounded-2xl p-1 max-sm:px-0.5 sm:p-2.5 md:p-3 shadow-[0_0_25px_rgba(20,241,149,0.35)] backdrop-blur-xl">
             <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-xl bg-emerald-950/90 border border-[#14F195] flex items-center justify-center mb-1">
               <Coins className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-[#14F195]" />
             </div>
-            <div className="text-[#14F195] text-[8px] sm:text-xs md:text-sm font-black uppercase tracking-wider text-center truncate w-full">
+            <div className="text-[#14F195] text-[7px] sm:text-xs md:text-sm font-black uppercase max-sm:tracking-normal tracking-wider text-center w-full">
               {lang === 'ua' ? '4. Отримувач' : '4. Received'}
             </div>
-            <div className="text-emerald-300 text-[7px] sm:text-[9px] md:text-[10px] font-mono font-black mt-0.5 whitespace-nowrap">
+            <div className="text-emerald-300 text-[7px] sm:text-[9px] md:text-[10px] font-mono font-black mt-0.5 max-sm:whitespace-normal max-sm:break-words text-center leading-tight">
               $1,000 OK
             </div>
           </div>
@@ -555,21 +555,21 @@ const SolanaSpeedVisual = ({ isMobile, lang }: { isMobile: boolean, lang: string
         <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-3 md:gap-4 mt-1.5 sm:mt-2.5 z-30">
           <div className="bg-black/95 border-2 border-[#14F195] px-2.5 py-1 sm:px-4 sm:py-1.5 md:px-5 md:py-2 rounded-2xl shadow-[0_0_30px_rgba(20,241,149,0.5)] flex items-center gap-1.5 sm:gap-2">
             <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-[#14F195] animate-bounce flex-shrink-0" />
-            <span className="text-white font-black text-[10px] sm:text-xs md:text-sm lg:text-base tracking-wider uppercase font-mono whitespace-nowrap">
+            <span className="text-white font-black text-[10px] sm:text-xs md:text-sm lg:text-base max-sm:tracking-normal tracking-wider uppercase font-mono max-sm:whitespace-normal max-sm:break-words text-center leading-tight">
               {lang === 'ua' ? 'МИТТЄВИЙ ПЕРЕКАЗ' : 'INSTANT FINALITY'}
             </span>
           </div>
 
           <div className="bg-black/95 border-2 border-cyan-400 px-2.5 py-1 sm:px-4 sm:py-1.5 md:px-5 md:py-2 rounded-2xl shadow-[0_0_25px_rgba(6,182,212,0.4)] flex items-center gap-1.5 sm:gap-2">
             <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-cyan-300 flex-shrink-0" />
-            <span className="text-cyan-200 font-extrabold text-[10px] sm:text-xs md:text-sm lg:text-base tracking-wider uppercase font-mono whitespace-nowrap">
+            <span className="text-cyan-200 font-extrabold text-[10px] sm:text-xs md:text-sm lg:text-base max-sm:tracking-normal tracking-wider uppercase font-mono max-sm:whitespace-normal max-sm:break-words text-center leading-tight">
               {lang === 'ua' ? 'БЕЗ БАНКІВСЬКИХ ЧЕРГ' : 'ZERO WAITING QUEUES'}
             </span>
           </div>
 
           <div className="bg-black/95 border-2 border-yellow-400 px-2.5 py-1 sm:px-4 sm:py-1.5 md:px-5 md:py-2 rounded-2xl shadow-[0_0_25px_rgba(250,204,21,0.4)] flex items-center gap-1.5 sm:gap-2">
             <Percent className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-yellow-400 flex-shrink-0" />
-            <span className="text-yellow-300 font-extrabold text-[10px] sm:text-xs md:text-sm lg:text-base tracking-wider uppercase font-mono whitespace-nowrap">
+            <span className="text-yellow-300 font-extrabold text-[10px] sm:text-xs md:text-sm lg:text-base max-sm:tracking-normal tracking-wider uppercase font-mono max-sm:whitespace-normal max-sm:break-words text-center leading-tight">
               {lang === 'ua' ? 'КОМІСІЯ: ~$0.00025' : 'FEE: ~$0.00025'}
             </span>
           </div>
@@ -586,9 +586,9 @@ const SolanaFeeVisual = ({ isMobile, lang }: { isMobile: boolean, lang: string }
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none px-4">
       <div className="flex flex-col items-center justify-center gap-3 sm:gap-5">
         {/* 100% Value Delivered */}
-        <div className="w-32 h-32 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-3xl bg-gradient-to-br from-[#14F195]/25 via-black/90 to-black border-3 sm:border-4 border-[#14F195] flex flex-col items-center justify-center shadow-[0_0_60px_rgba(20,241,149,0.5)] backdrop-blur-xl">
+        <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-3xl bg-gradient-to-br from-[#14F195]/25 via-black/90 to-black border-3 sm:border-4 border-[#14F195] flex flex-col items-center justify-center shadow-[0_0_60px_rgba(20,241,149,0.5)] backdrop-blur-xl">
            <Coins className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 text-[#14F195] mb-1.5 drop-shadow-[0_0_20px_rgba(20,241,149,0.9)]" />
-           <div className="text-white font-black text-2xl sm:text-3xl md:text-4xl tracking-wider font-display">$1,000</div>
+           <div className="text-white font-black text-2xl sm:text-3xl md:text-4xl max-sm:tracking-normal tracking-wider font-display">$1,000</div>
            <div className="text-[#14F195] font-black text-xs sm:text-sm md:text-base uppercase tracking-widest mt-1">
              {lang === 'ua' ? '100% ДОСТАВЛЕНО' : '100% DELIVERED'}
            </div>
@@ -602,7 +602,7 @@ const SolanaFeeVisual = ({ isMobile, lang }: { isMobile: boolean, lang: string }
           className="bg-black/95 border-2 border-yellow-400 px-4 py-2 sm:px-6 sm:py-2.5 rounded-full shadow-[0_0_30px_rgba(250,204,21,0.5)] flex items-center gap-2.5"
         >
           <span className="w-2.5 h-2.5 rounded-full bg-yellow-400 animate-pulse flex-shrink-0" />
-          <span className="text-yellow-300 font-black text-xs sm:text-sm md:text-base font-mono whitespace-nowrap">
+          <span className="text-yellow-300 font-black text-xs sm:text-sm md:text-base font-mono max-sm:whitespace-normal max-sm:break-words text-center leading-tight">
             {lang === 'ua' ? 'Комісія мережі: ~$0.00025 (частка цента)' : 'Network Fee: ~$0.00025 (fraction of a cent)'}
           </span>
         </motion.div>
@@ -626,19 +626,19 @@ const SmartContractVisual: React.FC<{ lang: string }> = ({ lang }) => (
         className="relative w-52 h-52 sm:w-68 sm:h-68 md:w-84 md:h-84 rounded-full border-3 border-purple-500/60 bg-gradient-to-tr from-purple-900/30 via-black/50 to-purple-500/20 shadow-[0_0_70px_rgba(168,85,247,0.4)] flex items-center justify-center"
         style={{ transformStyle: 'preserve-3d' }}
       >
-        <div className="w-32 h-32 sm:w-42 sm:h-42 md:w-50 md:h-50 rounded-3xl bg-black/95 border-3 border-purple-400 flex flex-col items-center justify-center shadow-[0_0_45px_rgba(168,85,247,0.7)] backdrop-blur-2xl" style={{ transform: 'translateZ(30px)' }}>
+        <div className="w-36 h-36 sm:w-42 sm:h-42 md:w-50 md:h-50 rounded-3xl bg-black/95 border-3 border-purple-400 flex flex-col items-center justify-center shadow-[0_0_45px_rgba(168,85,247,0.7)] backdrop-blur-2xl" style={{ transform: 'translateZ(30px)' }}>
           <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 6, ease: "linear" }}>
             <Settings className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 text-purple-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.9)]" />
           </motion.div>
-          <div className="mt-2 text-purple-200 font-black text-[10px] sm:text-xs md:text-sm tracking-wider uppercase">
+          <div className="mt-2 text-purple-200 font-black text-[10px] sm:text-xs md:text-sm max-sm:tracking-normal tracking-wider uppercase">
             {lang === 'ua' ? 'АВТОМАТИЧНИЙ КОД' : 'AUTOMATED CODE'}
           </div>
         </div>
 
-        <div className="absolute -top-5 sm:-top-6 left-1/2 -translate-x-1/2 bg-purple-950 border-2 border-purple-400 px-3.5 py-1 rounded-full text-[10px] sm:text-xs md:text-sm text-purple-200 font-extrabold uppercase shadow-xl whitespace-nowrap">
+        <div className="absolute -top-5 sm:-top-6 left-1/2 -translate-x-1/2 bg-purple-950 border-2 border-purple-400 px-3.5 py-1 rounded-full text-[10px] sm:text-xs md:text-sm text-purple-200 font-extrabold uppercase shadow-xl w-[120px] text-center max-sm:whitespace-normal max-sm:break-words">
           {lang === 'ua' ? 'Умова (Input)' : 'Condition (Input)'}
         </div>
-        <div className="absolute -bottom-5 sm:-bottom-6 left-1/2 -translate-x-1/2 bg-[#14F195]/25 border-2 border-[#14F195] px-3.5 py-1 rounded-full text-[10px] sm:text-xs md:text-sm text-[#14F195] font-extrabold uppercase shadow-xl whitespace-nowrap">
+        <div className="absolute -bottom-5 sm:-bottom-6 left-1/2 -translate-x-1/2 bg-[#14F195]/25 border-2 border-[#14F195] px-3.5 py-1 rounded-full text-[10px] sm:text-xs md:text-sm text-[#14F195] font-extrabold uppercase shadow-xl w-[120px] text-center max-sm:whitespace-normal max-sm:break-words">
           {lang === 'ua' ? 'Виконано (Execution)' : 'Execution (Done)'}
         </div>
       </motion.div>
@@ -663,7 +663,7 @@ const DeFiVisual: React.FC<{ lang: string }> = ({ lang }) => (
       >
         <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-blue-950 border-3 sm:border-4 border-blue-400 rounded-full flex flex-col items-center justify-center shadow-[0_0_50px_rgba(59,130,246,0.9)] z-10" style={{ transform: 'rotateX(-28deg)' }}>
            <Landmark className="w-10 h-10 sm:w-13 sm:h-13 md:w-16 md:h-16 text-blue-300 drop-shadow-[0_0_15px_rgba(59,130,246,0.9)]" />
-           <div className="text-[9px] sm:text-xs md:text-sm font-black text-blue-100 uppercase tracking-widest mt-1 whitespace-nowrap">
+           <div className="text-[9px] sm:text-xs md:text-sm font-black text-blue-100 uppercase tracking-widest mt-1 max-sm:whitespace-normal max-sm:break-words text-center leading-tight">
              {lang === 'ua' ? 'ПУЛ ЛІКВІДНОСТІ' : 'LIQUIDITY POOL'}
            </div>
         </div>
@@ -705,7 +705,7 @@ const NFTVisual: React.FC<{ lang: string }> = ({ lang }) => (
       >
          <div className="w-full h-full border-2 border-amber-500/50 rounded-2xl flex flex-col items-center justify-center bg-black/70 relative overflow-hidden p-3 text-center">
             <ImageIcon className="w-12 h-12 sm:w-16 sm:h-16 md:w-22 md:h-22 text-amber-400 mb-2 drop-shadow-[0_0_20px_rgba(251,191,36,0.95)]" />
-            <div className="text-amber-200 text-[10px] sm:text-xs md:text-sm font-black tracking-wider uppercase leading-tight">
+            <div className="text-amber-200 text-[10px] sm:text-xs md:text-sm font-black max-sm:tracking-normal tracking-wider uppercase leading-tight">
               {lang === 'ua' ? 'ПІДТВЕРДЖЕНА ВЛАСНІСТЬ' : 'VERIFIED OWNERSHIP'}
             </div>
             <div className="text-amber-400 font-mono text-[9px] sm:text-[10px] md:text-xs mt-1.5 font-bold">#SOL-NFT-9842</div>
@@ -776,10 +776,10 @@ const WhyExistVisual: React.FC<{ lang: string }> = ({ lang }) => {
                 <item.icon className={`w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 ${item.col}`} />
               </div>
               <div className="flex flex-col min-w-0">
-                <div className={`text-xs sm:text-sm md:text-base font-black tracking-wider uppercase ${item.col} truncate`}>
+                <div className={`text-xs sm:text-sm md:text-base font-black max-sm:tracking-normal tracking-wider uppercase ${item.col} truncate`}>
                   {item.title}
                 </div>
-                <div className="text-[10px] sm:text-xs md:text-sm text-white/85 font-semibold truncate mt-0.5">
+                <div className="text-[10px] sm:text-xs md:text-sm text-white/85 font-semibold mt-0.5">
                   {item.sub}
                 </div>
               </div>
@@ -829,9 +829,9 @@ const FinalSpaceVisual: React.FC<{ lang: string }> = ({ lang }) => {
           style={{ transformStyle: 'preserve-3d' }}
         >
           {/* Main Central Monolith */}
-          <div className="absolute w-20 h-20 sm:w-30 sm:h-30 md:w-44 md:h-44 bg-gradient-to-tr from-[#14F195]/35 via-black/95 to-black border-3 border-[#14F195] flex flex-col items-center justify-center rounded-3xl shadow-[0_0_90px_rgba(20,241,149,0.8)] backdrop-blur-2xl z-20">
+          <div className="absolute w-24 h-24 sm:w-30 sm:h-30 md:w-44 md:h-44 bg-gradient-to-tr from-[#14F195]/35 via-black/95 to-black border-3 border-[#14F195] flex flex-col items-center justify-center rounded-3xl shadow-[0_0_90px_rgba(20,241,149,0.8)] backdrop-blur-2xl z-20">
             <Network className="w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 text-[#14F195] drop-shadow-[0_0_18px_rgba(20,241,149,1)]" />
-            <div className="mt-1.5 text-white font-black text-[8px] sm:text-[9px] md:text-xs tracking-wider uppercase bg-black/90 px-2.5 py-0.5 rounded-full border border-[#14F195]/50 text-center whitespace-nowrap">
+            <div className="mt-1.5 text-white font-black text-[8px] sm:text-[9px] md:text-xs max-sm:tracking-normal tracking-wider uppercase bg-black/90 px-2.5 py-0.5 rounded-full border border-[#14F195]/50 text-center max-sm:whitespace-normal max-sm:break-words text-center leading-tight">
               {lbls.core}
             </div>
           </div>
@@ -841,17 +841,17 @@ const FinalSpaceVisual: React.FC<{ lang: string }> = ({ lang }) => {
             <div 
               key={i} 
               className="absolute top-1/2 left-1/2" 
-              style={{ transform: `translate(-50%, -50%) rotateY(${item.rot}deg) translateZ(clamp(95px, 22vw, 220px))` }}
+              style={{ transform: `translate(-50%, -50%) rotateY(${item.rot}deg) translateZ(clamp(130px, 30vw, 220px))` }}
             >
               <motion.div 
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 3, repeat: Infinity, delay: i * 0.3 }}
-                className={`flex flex-col items-center justify-center p-2 sm:p-3 md:p-3.5 rounded-2xl border-2 sm:border-3 ${item.border} ${item.bg} backdrop-blur-xl shadow-[0_0_35px_rgba(0,0,0,0.85)] w-[86px] sm:w-[115px] md:w-[150px] text-center`}
+                className={`flex flex-col items-center justify-center p-2 sm:p-3 md:p-3.5 rounded-2xl border-2 sm:border-3 ${item.border} ${item.bg} backdrop-blur-xl shadow-[0_0_35px_rgba(0,0,0,0.85)] w-[96px] h-[90px] sm:w-[115px] sm:h-[110px] md:w-[150px] md:h-[140px] text-center`}
               >
                 <div className="p-1 sm:p-1.5 rounded-xl bg-black/95 border border-white/30 mb-1 sm:mb-1.5">
                   <item.icon className={`w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 ${item.color}`} />
                 </div>
-                <div className={`text-[8px] sm:text-[10px] md:text-sm font-black tracking-wider ${item.color} uppercase leading-tight`}>
+                <div className={`text-[8px] sm:text-[10px] md:text-sm font-black max-sm:tracking-normal tracking-wider ${item.color} uppercase leading-tight`}>
                   {item.title}
                 </div>
                 <div className="text-[7px] sm:text-[8px] md:text-[10px] text-white/90 font-bold mt-0.5 leading-snug">
@@ -886,7 +886,7 @@ const Money = ({ x, y, cWidth, cHeight, amount, isWait, isMobile }: any) => {
          { type: "spring", stiffness: 60, damping: 14 }
       }
     >
-       <div className="px-3 py-1 sm:px-3.5 sm:py-1.5 bg-gradient-to-r from-amber-400 to-yellow-400 border-2 border-yellow-200 rounded-full shadow-[0_0_20px_rgba(245,158,11,0.6)] flex items-center justify-center font-black text-slate-950 text-[11px] sm:text-xs md:text-sm tracking-wide backdrop-blur-md whitespace-nowrap">
+       <div className="px-3 py-1 sm:px-3.5 sm:py-1.5 bg-gradient-to-r from-amber-400 to-yellow-400 border-2 border-yellow-200 rounded-full shadow-[0_0_20px_rgba(245,158,11,0.6)] flex items-center justify-center font-black text-slate-950 text-[11px] sm:text-xs md:text-sm tracking-wide backdrop-blur-md max-sm:whitespace-normal max-sm:break-words text-center leading-tight">
           <span>{amount}</span>
        </div>
     </motion.div>
@@ -938,7 +938,7 @@ export function Scene({ state, isMobile, speed, lang }: any) {
   };
 
   return (
-    <div id="scene-viewport" className="w-full h-full relative overflow-hidden flex items-center justify-center">
+    <div id="scene-viewport" className="w-full h-full relative overflow-visible flex items-center justify-center max-sm:scale-[0.85] sm:scale-100 transition-transform duration-500 origin-center">
        {/* Background atmospheric ambient lights */}
        <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none z-0">
           <div className={`absolute w-[350px] sm:w-[500px] md:w-[650px] h-[350px] sm:h-[500px] md:h-[650px] rounded-full blur-[120px] transition-colors duration-1000 ${state >= AppState.BLOCKCHAIN_INTRO ? 'bg-[#14F195]/10' : 'bg-cyan-600/10'}`} />
@@ -954,7 +954,7 @@ export function Scene({ state, isMobile, speed, lang }: any) {
        {/* 2. BANK FLOW (Slides 1 - 8) */}
        <AnimatePresence>
          {isBankFlow && (
-           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="relative w-full max-w-[360px] md:max-w-4xl h-[330px] md:h-[280px] mx-auto flex items-center justify-center">
+           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="relative w-full max-w-[360px] md:max-w-4xl h-full max-h-[350px] md:h-[280px] mx-auto flex items-center justify-center">
              {/* SVG Connectors */}
              <svg viewBox={`0 0 ${c.width} ${c.height}`} className="absolute inset-0 w-full h-full pointer-events-none overflow-visible" style={{ zIndex: 5 }}>
                <DynamicBankArrow start={c.sender} end={c.b1} active={state >= AppState.BANK_SIMPLE} isWait={state === AppState.BANK_WAIT} isMobile={isMobile} />
@@ -982,7 +982,7 @@ export function Scene({ state, isMobile, speed, lang }: any) {
                <motion.div 
                  initial={{ opacity: 0, y: 0, scale: 0.5 }}
                  animate={{ opacity: 1, y: isMobile ? -62 : -74, scale: 1 }}
-                 className="absolute z-50 text-red-400 font-extrabold text-lg sm:text-xl md:text-2xl drop-shadow-[0_0_15px_rgba(239,68,68,0.9)] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap"
+                 className="absolute z-50 text-red-400 font-extrabold text-lg sm:text-xl md:text-2xl drop-shadow-[0_0_15px_rgba(239,68,68,0.9)] -translate-x-1/2 -translate-y-1/2 max-sm:whitespace-normal max-sm:break-words text-center leading-tight"
                  style={{ left: `${(c.ps.x / c.width) * 100}%`, top: `${(c.ps.y / c.height) * 100}%` }}
                >
                  - $50
