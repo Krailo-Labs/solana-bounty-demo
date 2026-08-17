@@ -131,7 +131,7 @@ export function MainStage({ isMobile }: { isMobile: boolean }) {
        </div>
        
        {/* Central Content Block (Groups Scene and Text closely on mobile, expands naturally on PC) */}
-       <div className="w-full flex-1 flex flex-col justify-center sm:justify-start min-h-0 relative">
+       <div className="w-full flex-1 flex flex-col justify-center sm:justify-center min-h-0 relative">
          {/* 3D Scene Viewport */}
          <main className={slideLayoutConfig[state]?.sceneClasses || 'w-full max-sm:flex-1 sm:flex-1 relative z-10 flex items-center justify-center p-1 sm:p-2 md:p-3 overflow-visible'} style={{ transition: 'height 0.5s ease-in-out' }}>
            <div className="w-full h-full relative">
