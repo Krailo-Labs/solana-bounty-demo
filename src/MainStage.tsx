@@ -10,15 +10,15 @@ import { QAExplorer } from './QAExplorer';
 import { data } from './data';
 
 const stateDurations: Record<AppState, number> = {
-  [AppState.INTRO]: 0,
-  [AppState.BANK_SIMPLE]: 4000,
+  [AppState.INTRO]: 6000,
+  [AppState.BANK_SIMPLE]: 6000,
   [AppState.BANK_CHECK]: 4000,
   [AppState.BANK_INSTITUTION]: 4000,
   [AppState.BANK_FEE]: 4000,
   [AppState.BANK_WAIT]: 6000,
   [AppState.BANK_HUMAN]: 4000,
   [AppState.BANK_RECEIVED]: 3500,
-  [AppState.HOOK]: 0,
+  [AppState.HOOK]: 5000,
   [AppState.BLOCKCHAIN_INTRO]: 4500,
   [AppState.SOLANA_REVEAL]: 4500,
   [AppState.SOLANA_SPEED]: 3000,

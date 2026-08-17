@@ -56,3 +56,8 @@ This project isn't just about a pretty UI; it is engineered for global scale, ul
 - **AI Infrastructure:** Cloudflare AI Gateway 
 - **LLM Engine:** Integrated via CF Gateway
 
+## 📱 Mobile-First & Hands-Free Experience
+
+- **Mobile-Optimized (but Desktop friendly):** The UI was designed with a mobile-first approach, ensuring the layout, animations, and text look perfect on smartphones. It is fully responsive and scales beautifully for Desktop users as well.
+- **Autoplay Mode:** Zero forced interaction required! The presentation acts like a movie, automatically advancing through the story so the user can just sit back and watch the money flow.
+- **Interactive Controls:** Want to take over? The user is always in control. You can manually click to speed up, use the media controls to pause the journey, or skip steps entirely at your own pace.
