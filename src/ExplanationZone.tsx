@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { AppState } from './types';
+import { slideLayoutConfig } from './layoutConfig';
 
 export function ExplanationZone({ state, t }: { state: AppState, t: any }) {
   const textMap = {
@@ -35,7 +36,7 @@ export function ExplanationZone({ state, t }: { state: AppState, t: any }) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -6 }}
           transition={{ duration: 0.2 }}
-          className="flex flex-col items-center justify-center w-full max-w-3xl px-1"
+          className={slideLayoutConfig[state]?.textAlignmentClasses || 'flex flex-col items-center justify-center w-full max-w-3xl px-1 text-center'}
         >
           <h1 
             className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black font-display tracking-tight text-white leading-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]"

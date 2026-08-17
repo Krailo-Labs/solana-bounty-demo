@@ -3,6 +3,7 @@ import { AppState, Language, Speed } from './types';
 import { audio } from './audio';
 import { Header } from './Header';
 import { Scene } from './Scene';
+import { slideLayoutConfig } from './layoutConfig';
 import { ExplanationZone } from './ExplanationZone';
 import { ActionZone } from './ActionZone';
 import { QAExplorer } from './QAExplorer';
@@ -102,6 +103,7 @@ export function MainStage({ isMobile }: { isMobile: boolean }) {
   const t = data[lang];
   const currentDuration = stateDurations[state] / speed;
 
+
   if (isQAOpen) {
     return (
       <div id="main-stage-qa" className="w-full h-full flex flex-col bg-[#0A0A0B] overflow-hidden select-none">
@@ -128,18 +130,23 @@ export function MainStage({ isMobile }: { isMobile: boolean }) {
          />
        </div>
        
-       {/* 3D Scene Viewport */}
-       <main className="w-full flex-1 min-h-0 relative z-10 overflow-hidden flex items-center justify-center p-1 sm:p-2 md:p-3">
-         <Scene state={state} isMobile={isMobile} speed={speed} lang={lang} />
-       </main>
-       
-       {/* Explanation Zone (Lifted slightly higher with comfortable breathing room) */}
-       <div className="w-full flex-shrink-0 z-20 flex items-center justify-center pt-1 pb-2 sm:pt-2 sm:pb-3">
-         <ExplanationZone state={state} t={t} />
+       {/* Central Content Block (Groups Scene and Text closely on mobile, expands naturally on PC) */}
+       <div className="w-full flex-1 flex flex-col justify-center sm:justify-start min-h-0 relative">
+         {/* 3D Scene Viewport */}
+         <main className={slideLayoutConfig[state]?.sceneClasses || 'w-full max-sm:flex-1 sm:flex-1 relative z-10 flex items-center justify-center p-1 sm:p-2 md:p-3 overflow-visible'} style={{ transition: 'height 0.5s ease-in-out' }}>
+           <div className="w-full h-full relative">
+             <Scene state={state} isMobile={isMobile} speed={speed} lang={lang} />
+           </div>
+         </main>
+         
+         {/* Explanation Zone */}
+         <div className={slideLayoutConfig[state]?.textZoneClasses || 'w-full flex-shrink-0 z-20 flex items-center justify-center pt-1 max-sm:pt-2 pb-2 sm:pt-2 sm:pb-3 relative'} style={{ transition: 'all 0.5s ease-in-out' }}>
+           <ExplanationZone state={state} t={t} />
+         </div>
        </div>
        
        {/* Action Controls (Lifted upwards away from bottom screen edges) */}
-       <div className="w-full h-[68px] sm:h-[78px] md:h-[84px] flex-shrink-0 z-30 pb-3 sm:pb-5 md:pb-6 flex items-center justify-center">
+       <div className="w-full max-sm:h-[84px] h-[78px] md:h-[84px] flex-shrink-0 z-30 max-sm:pb-7 pb-3 sm:pb-5 md:pb-6 flex items-center justify-center">
          <ActionZone 
            state={state} t={t} 
            onNext={handleNext} 
