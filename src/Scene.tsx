@@ -353,17 +353,17 @@ const BlockchainLedgerSlide = ({ isMobile, lang }: { isMobile: boolean, lang: st
 // 6. Live Solana Validator Network Slide (Slide 10: SOLANA_REVEAL)
 const SolanaNetworkSlide = ({ isMobile, lang }: { isMobile: boolean, lang: string }) => {
   const nodes = isMobile ? [
-    { x: '16%', y: '22%', name: 'Комп\'ютер 1 (ЄС)', role: 'Перевірка балансу' },
-    { x: '84%', y: '22%', name: 'Комп\'ютер 2 (США)', role: 'Захист від підробки' },
-    { x: '16%', y: '78%', name: 'Комп\'ютер 3 (Азія)', role: 'Запис переказу' },
-    { x: '84%', y: '78%', name: 'Комп\'ютер 4 (Австралія)', role: 'Миттєва згода' },
-    { x: '50%', y: '50%', name: 'СПІЛЬНИЙ КОНСЕНСУС', role: '2,000+ комп\'ютерів' },
+    { x: '16%', y: '22%', name: 'Computer 1 (EU)', role: 'Checks balance' },
+    { x: '84%', y: '22%', name: 'Computer 2 (USA)', role: 'Prevents double spend' },
+    { x: '16%', y: '78%', name: 'Computer 3 (Asia)', role: 'Records transfer' },
+    { x: '84%', y: '78%', name: 'Computer 4 (Australia)', role: 'Instant consensus' },
+    { x: '50%', y: '50%', name: 'SHARED CONSENSUS', role: '2,000+ computers' },
   ] : [
-    { x: '15%', y: '24%', name: 'Комп\'ютер 1 (Європа)', role: 'Перевіряє баланс відправника' },
-    { x: '50%', y: '16%', name: 'Комп\'ютер 2 (США)', role: 'Захищає від повторних витрат' },
-    { x: '85%', y: '24%', name: 'Комп\'ютер 3 (Азія)', role: 'Записує в історію транзакцій' },
-    { x: '22%', y: '76%', name: 'Комп\'ютер 4 (Бразилія)', role: 'Підтверджує відсутність шахрайства' },
-    { x: '78%', y: '76%', name: 'Комп\'ютер 5 (Австралія)', role: 'Дає миттєве підтвердження' },
+    { x: '15%', y: '24%', name: 'Computer 1 (EU)', role: 'Checks balance' },
+    { x: '50%', y: '16%', name: 'Computer 2 (USA)', role: 'Prevents double spend' },
+    { x: '85%', y: '24%', name: 'Computer 3 (Asia)', role: 'Records transfer' },
+    { x: '22%', y: '76%', name: 'Computer 4 (Brazil)', role: 'Verifies no fraud' },
+    { x: '78%', y: '76%', name: 'Computer 5 (Australia)', role: 'Provides instant confirmation' },
   ];
 
   const centerTitle = lang === 'ua' ? 'КОЛЕКТИВНА ЗГОДА' : 'COLLECTIVE CONSENSUS';
