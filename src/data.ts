@@ -17,7 +17,7 @@ export const data = {
     "bank_human_sub": "Financial organizations have weekends, closing hours, and queues that slow down execution.",
     "bank_received_title": "<span class='text-[#14F195]'>Finally Received.</span>",
     "bank_received_sub": "The funds arrived — but look at how slow, costly, and complex the path was.",
-    "hook_title": "What if the path could be <span class='text-cyan-400'>instant & direct</span>?",
+    "hook_title": "Skip the banks →<span class='text-cyan-400'>instant & direct</span>?",
     "hook_sub": "Same goal. Completely modern architecture with zero middlemen.",
     "btn_see_other": "See the other path →",
     "bc_title": "Imagine a <span class='text-cyan-400'>shared digital notebook</span>.",
