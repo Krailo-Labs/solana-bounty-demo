@@ -1,0 +1,6 @@
+{
+  "name": "Solana Interactive Explorer",
+  "description": "An interactive 3D visual guide comparing traditional banking with the high-speed Solana blockchain network.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
