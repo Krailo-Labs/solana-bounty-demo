@@ -32,10 +32,10 @@ At the final stage of the experience, users are introduced to an interactive AI 
 
 1. **Preset-Driven Mode (Zero Latency & Cost-Effective):** 
    By default, the assistant operates on curated, high-value preset prompts covering common follow-up questions about Solana (e.g., "How do I start?", "Is it safe?"). 
-   * **Why this design?** It guarantees an instantaneous, zero-cost, and reliable user experience for judges and casual users without cold starts, rate limits, or unnecessary AI token consumption.
+   * **Why this design?** It guarantees an instantaneous, zero-cost, and reliable user experience without cold starts, rate limits, or unnecessary AI token consumption.
 
 2. **Pluggable Edge AI (For Curious & Technical Users):** 
-   For judges or power users who wish to ask custom questions, the interface includes a dynamic endpoint configuration. Users can simply paste their own **Cloudflare Worker AI** or **Cloudflare AI Gateway** URL directly in the settings to unlock a full, live LLM chat session.
+   For those who wish to ask custom questions, the interface includes a dynamic endpoint configuration. Users can simply paste their own **Cloudflare Worker AI** or **Cloudflare AI Gateway** URL directly in the settings to unlock a full, live LLM chat session.
 
 > **Engineering Philosophy:** High performance and instant clarity out-of-the-box for general audiences, paired with modular Cloudflare Edge extensibility for those who want to dive deeper.
 
@@ -61,9 +61,9 @@ This project isn't just about a pretty UI; it is engineered for global scale, ul
 
 ---
 
-## 📱 Mobile-First & Hands-Free Experience
+## 🖥️📱 Universal & Hands-Free Experience
 
-- **Mobile-Optimized (but Desktop friendly):** The UI was designed with a mobile-first approach, ensuring the layout, animations, and text look perfect on smartphones. It is fully responsive and scales beautifully for Desktop users as well.
+- **Cross-Platform Excellence:** Engineered to look beautiful and function flawlessly across all devices. Whether viewed on a wide desktop monitor or a smartphone, the layout, animations, and typography scale perfectly to deliver a premium experience.
 - **Autoplay Mode:** Zero forced interaction required! The presentation acts like a movie, automatically advancing through the story so the user can just sit back and watch the money flow.
 - **Interactive Controls:** Want to take over? The user is always in control. You can manually click to speed up, use the media controls to pause the journey, or skip steps entirely at your own pace.
 
