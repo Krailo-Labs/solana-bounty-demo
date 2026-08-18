@@ -69,8 +69,8 @@ export function QAExplorer({
   ]);
   const [isTyping, setIsTyping] = useState(false);
   const [cfWorkerUrl, setCfWorkerUrl] = useState<string>(() => {
-  const saved = localStorage.getItem('solana_cf_worker_url');
-    return saved !== null ? saved : 'https://solana-ai.krailo.sh/chat'; 
+    const saved = localStorage.getItem('solana_cf_worker_url');
+    return saved ? saved : 'https://solana-ai.krailo.sh/chat'; 
   });
   const [showSettings, setShowSettings] = useState(false);
   const [savedUrlNotification, setSavedUrlNotification] = useState(false);
